@@ -15,6 +15,7 @@ using namespace ci::app;
 
 Walker::Walker()
 {
+
     ci::vec2 center = getWindowCenter();
     x_ = center.x;
     y_ = center.y;
