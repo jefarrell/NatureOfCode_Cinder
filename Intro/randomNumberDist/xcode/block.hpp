@@ -26,13 +26,11 @@ public:
     
 
     
-    void display();
-    void increase();
+    void draw();
+    void update();
     float x1_, y1_, x2_, y2_;
     
 private:
     Block(float x1, float x2, float y1, float y2);
-    int randomNum = 0;
-
-    //Block(float x1, float x2, float y1, float y2);
+    int counter = 0;
 };

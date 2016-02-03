@@ -19,23 +19,17 @@ Block::Block(float x1, float y1, float x2, float y2)
     y1_ = y1;
     x2_ = x2;
     y2_ = y2;
-    //std::cout << x1_ << ", " << x2_ << ", " << y2_;
 }
 
-void Block::display()//draw
+void Block::draw()//draw
 {
     gl::color(1,1,1);
-    gl::drawStrokedRect(Rectf(x1_, y1_-randomNum, x2_, y2_));
-   // std::cout << x1_ << ", " << x2_ << ", " << y2_;
+    gl::drawStrokedRect(Rectf(x1_, y1_-counter, x2_, y2_));
  
 }
 
 
-void Block::increase()//update
+void Block::update()
 {
-    randomNum++;
-    // dont draw again, just update y1;
-        // neneds to be seeded the right starting place in block()
-            //that will happen through a loop in the app
-    //then increase will add via random number
+    counter++;
 }

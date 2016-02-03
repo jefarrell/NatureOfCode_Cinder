@@ -8,7 +8,7 @@ using namespace ci;
 using namespace ci::app;
 using namespace std;
 
-const int NUM_BARS = 500;
+const int NUM_BARS = 50;
 
 class randomNumberDistApp : public App {
   public:
@@ -18,8 +18,6 @@ class randomNumberDistApp : public App {
 	void draw() override;
     
     std::vector<BlockRef> blocks;
-private:
-//    int randomCount[NUM_BARS];
 };
 
 void randomNumberDistApp::setup()
@@ -29,10 +27,8 @@ void randomNumberDistApp::setup()
     float h = getWindowHeight();
     float w = getWindowWidth();
     
-  
-    
     for (int i = 0; i < NUM_BARS; i++){
-        BlockRef block = Block::create(w*(i)/NUM_BARS,h/2,w*(i+1)/NUM_BARS,h);
+        BlockRef block = Block::create(w*(i)/NUM_BARS,h,w*(i+1)/NUM_BARS,h);
         blocks.push_back(block);
     }
     
@@ -46,7 +42,7 @@ void randomNumberDistApp::update()
 {
     
     int index = (int)(ci::randFloat()*NUM_BARS);
-    blocks[index]->increase();
+    blocks[index]->update();
     
 }
 
@@ -55,7 +51,7 @@ void randomNumberDistApp::draw()
    
 	gl::clear( Color( 0, 0, 0 ) );
     for ( int i = 0; i < blocks.size(); i++){
-        blocks[i] -> display();
+        blocks[i] -> draw();
     }
 }
 
