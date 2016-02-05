@@ -20,7 +20,6 @@ class RandomWalkerApp : public App {
 
 void RandomWalkerApp::setup()
 {
-      
     walker=Walker::create();
 }
 
@@ -36,6 +35,7 @@ void RandomWalkerApp::update()
 
 void RandomWalkerApp::draw()
 {
+    gl::clear();
     walker->display();
 }
 

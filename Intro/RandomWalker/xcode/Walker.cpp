@@ -25,7 +25,7 @@ Walker::Walker()
 void Walker::display()
 {
     gl::color(1,1,1,0.5);
-    gl::drawSolidCircle(vec2(x_,y_), 1.0);
+    gl::drawSolidCircle(vec2(x_,y_), 2.5);
     
 }
 
