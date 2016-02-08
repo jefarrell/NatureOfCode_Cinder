@@ -21,7 +21,7 @@ Block::Block(float x1, float y1, float x2, float y2)
     y2_ = y2;
 }
 
-void Block::draw()//draw
+void Block::draw()
 {
     gl::color(1,1,1);
     gl::drawStrokedRect(Rectf(x1_, y1_-counter, x2_, y2_));

@@ -14,7 +14,6 @@ using namespace ci::app;
 
 dot::dot()
 {
-    x_;
     y_= getWindowHeight()/2;
 }
 
@@ -29,6 +28,6 @@ void dot::update()
 
 void dot::draw()
 {
-    gl::color(1,1,1);
+    //gl::color(1,1,1);
     gl::drawSolidCircle(vec2(x_,y_), 5);
 }

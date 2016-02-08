@@ -19,6 +19,7 @@ class NormalDistributionApp : public App {
 
 void NormalDistributionApp::setup()
 {
+    
     dot=dot::create();
 }
 
