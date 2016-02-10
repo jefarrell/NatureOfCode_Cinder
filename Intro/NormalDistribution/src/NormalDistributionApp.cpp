@@ -35,8 +35,8 @@ void NormalDistributionApp::update()
 
 void NormalDistributionApp::draw()
 {
-    gl::clear();
     dot->draw();
+    gl::clear();
 }
 
 CINDER_APP( NormalDistributionApp, RendererGl )

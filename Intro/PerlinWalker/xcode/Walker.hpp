@@ -10,8 +10,7 @@
 #define Walker_hpp
 
 #include <stdio.h>
-#include "cinder/gl/gl.h"
-#include "cinder/Vector.h"
+#include "cinder/Perlin.h"
 
 #endif /* Walker_hpp */
 
@@ -29,6 +28,7 @@ public:
     
     float x_, y_;
     float tx_, ty_;
+    cinder::Perlin perlin_;
     
     
 private:

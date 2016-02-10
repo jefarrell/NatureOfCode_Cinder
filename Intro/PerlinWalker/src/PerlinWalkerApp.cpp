@@ -17,10 +17,14 @@ class PerlinWalkerApp : public App {
     WalkerRef walker;
 };
 
+
 void PerlinWalkerApp::setup()
 {
+    gl::clear( Color( 0, 0, 0 ) );
     walker=Walker::create();
 }
+
+
 
 void PerlinWalkerApp::mouseDown( MouseEvent event )
 {
@@ -33,7 +37,6 @@ void PerlinWalkerApp::update()
 
 void PerlinWalkerApp::draw()
 {
-	gl::clear( Color( 0, 0, 0 ) );
     walker->draw();
 }
 

@@ -7,8 +7,8 @@
 //
 
 #include "Walker.hpp"
-#include "cinder/Perlin.h"
 #include "cinder/gl/gl.h"
+#include "cinder/Rand.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -19,8 +19,8 @@ Walker::Walker()
     x_ = 0, y_ = 0;
     tx_ = 0;
     ty_ = 1000;
-
-    
+   
+   
     
     
 }
@@ -29,13 +29,12 @@ void Walker::update()
 {
     float w = getWindowWidth();
     float h = getWindowHeight();
-    Perlin perlin_;
+
+    x_ = (w/2) + lmap(perlin_.noise(tx_), 0.0f, 1.0f, 0.0f, w);
+    y_ = (h/2) + lmap(perlin_.noise(ty_), 0.0f, 1.0f, 0.0f, h);
     
-    x_ = (w/2)+lmap(perlin_.noise(tx_), 0.0f, 1.0f, 0.0f, w);
-    y_ = (h/2)+lmap(perlin_.noise(ty_), 0.0f, 1.0f, 0.0f, h);
-    
-    tx_+=0.01;
-    ty_+=0.01;
+    tx_+= 0.001;
+    ty_+= 0.001;
     
     
 }
