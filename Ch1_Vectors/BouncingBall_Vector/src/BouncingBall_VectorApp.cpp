@@ -33,8 +33,9 @@ void BouncingBall_VectorApp::update()
 
 void BouncingBall_VectorApp::draw()
 {
+    gl::clear( Color( 0, 0, 0 ) );
     ball->draw();
-	gl::clear( Color( 0, 0, 0 ) ); 
+
 }
 
 CINDER_APP( BouncingBall_VectorApp, RendererGl )

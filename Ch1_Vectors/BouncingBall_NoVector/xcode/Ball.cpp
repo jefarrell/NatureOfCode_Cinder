@@ -7,8 +7,6 @@
 //
 
 #include "Ball.hpp"
-#include "cinder/gl/gl.h"
-#include "cinder/Vector.h"
 
 using namespace ci;
 using namespace ci::app;

@@ -12,6 +12,7 @@
 #include <stdio.h>
 
 #endif /* Ball_hpp */
+using namespace glm;
 
 typedef std::shared_ptr<class Ball> BallRef;
 
@@ -23,6 +24,10 @@ public:
     
     void update();
     void draw();
+
+    vec2 position_;
+    vec2 speed_;
+    
     
 private:
     Ball();
