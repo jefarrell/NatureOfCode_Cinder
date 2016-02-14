@@ -26,8 +26,6 @@ void VectorMultiplicationApp::setup()
 
 void VectorMultiplicationApp::update()
 {
-      mousePos_ = mousePos_ - center_;
-      mousePos_ *= 0.5;
 }
 
 void VectorMultiplicationApp::draw()
@@ -43,6 +41,8 @@ void VectorMultiplicationApp::draw()
 
 void VectorMultiplicationApp::mouseMove( MouseEvent event ){
     mousePos_ = event.getPos();
+    mousePos_ = mousePos_ - center_;
+    mousePos_ *= 0.5;
 }
 
 
