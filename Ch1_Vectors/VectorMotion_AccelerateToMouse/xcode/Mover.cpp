@@ -1,6 +1,6 @@
 //
 //  Mover.cpp
-//  VectorMotion_Acceleration
+//  VectorMotion_AccelerateToMouse
 //
 //  Created by John Farrell on 2/14/16.
 //

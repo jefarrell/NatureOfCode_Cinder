@@ -1,6 +1,6 @@
 //
 //  Mover.hpp
-//  VectorMotion_RandomAcceleration
+//  VectorMotion_AccelerateToMouse
 //
 //  Created by John Farrell on 2/14/16.
 //
