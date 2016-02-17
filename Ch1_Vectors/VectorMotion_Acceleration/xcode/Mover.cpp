@@ -24,9 +24,8 @@ void Mover::update()
 {
     velocity_ += acceleration_;
     location_ += velocity_;
-    limit(velocity_, topSpeed_);
+    velocity_ = limit(velocity_, topSpeed_);
     checkEdges();
-    std::cout << velocity_ << " ";
 }
 
 vec2 Mover::limit(vec2 input, float max)
@@ -35,7 +34,6 @@ vec2 Mover::limit(vec2 input, float max)
     if (I > max) {
         return glm::normalize(input)*max;
     }
-    std::cout << input << "/ ";
     return input;
 };
 
