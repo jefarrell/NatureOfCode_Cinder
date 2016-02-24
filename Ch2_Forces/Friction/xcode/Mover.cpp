@@ -26,6 +26,7 @@ void Mover::applyForce(vec2 force_)
 {
     force_ = force_ / mass_;
     acceleration_ += force_;
+    
 
 }
 
@@ -36,6 +37,7 @@ void Mover::update()
     velocity_ += acceleration_;
     //limit(velocity_, topSpeed_);
     location_ += velocity_;
+    acceleration_ = vec2(0,0);
 
 }
 

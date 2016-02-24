@@ -34,31 +34,25 @@ void FrictionApp::mouseDown( MouseEvent event )
 
 void FrictionApp::update()
 {
-    vec2 wind = vec2(0.0001,0);
-    vec2 gravity = vec2(0,0.001);
-    float c = 0.1;
+    vec2 wind = vec2(0.01,0);
+    vec2 gravity = vec2(0,0.1);
+    float c = 0.05;
+    
     for (auto m : movers_) {
-
-
-        vec2 friction = m->velocity_;
-        friction *= -1.0f;
-        friction = glm::normalize(friction);
-        friction *= c;
-        
-        
-        m->applyForce(friction);
         
         m->applyForce(wind);
         m->applyForce(gravity);
         
+        vec2 friction = m->velocity_;
+        friction *= -1;
+        if (length(friction) > 0)
+            friction = glm::normalize(friction);
+        
+        friction *= c;
+        m->applyForce(friction);
+        
         m->update();
         m->checkEdges();
- 
-//        cout<<"friction: " << friction <<endl;
-//        cout<<"velocity: " << m->velocity_<<endl;
-//        cout<<"wind: " << wind<<endl;
-//        
-
     }
 }
 
