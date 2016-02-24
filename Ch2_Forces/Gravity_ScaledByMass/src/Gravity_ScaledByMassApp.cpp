@@ -15,8 +15,6 @@ class Gravity_ScaledByMassApp : public App {
 	void update() override;
 	void draw() override;
     
-
-    
     int NUM_MOVERS = 25;
     MoverRef mover;
     vector<MoverRef> movers_;
@@ -25,7 +23,7 @@ class Gravity_ScaledByMassApp : public App {
 void Gravity_ScaledByMassApp::setup()
 {
     for (int i = 0; i < NUM_MOVERS; i++) {
-        mover=Mover::create(randFloat(6),10,10);
+        mover=Mover::create(randFloat()*6.0f,10,10);
         movers_.push_back(mover);
     }
 }

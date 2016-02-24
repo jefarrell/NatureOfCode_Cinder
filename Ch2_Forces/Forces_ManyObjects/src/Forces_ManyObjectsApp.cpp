@@ -26,7 +26,7 @@ public:
 void Forces_ManyObjectsApp::setup()
 {
     for (int i = 0; i < NUM_MOVERS; i++) {
-        mover=Mover::create(randFloat(6),10,10);
+        mover=Mover::create(randFloat()*6.0f,10,10);
         movers_.push_back(mover);
     }
     
