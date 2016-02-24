@@ -18,6 +18,7 @@ Mover::Mover(){
     acceleration_ = vec2(0,0);
     mass_ = 1.0f;
     topSpeed_ = 10.0f;
+
 }
 
 
@@ -40,9 +41,9 @@ void Mover::update()
 void Mover::draw()
 {
     gl::color(0.5,0.5,0.5,0.5);
-    gl::drawSolidCircle(location_, 20);
+    gl::drawSolidCircle(location_, mass_*16);
     gl::color(0,0,0);
-    gl::drawStrokedCircle(location_, 20);
+    gl::drawStrokedCircle(location_, mass_*16);
     
 }
 
