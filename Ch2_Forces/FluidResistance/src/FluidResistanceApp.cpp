@@ -40,9 +40,7 @@ void FluidResistanceApp::update()
     liquid->update();
     
     for (auto m : movers_) {
-        vec2 wind = vec2(0.01,0);
         vec2 gravity = vec2(0,0.1*m->mass_);
-        m->applyForce(wind);
         m->applyForce(gravity);
        
         if (liquid->contains(m->location_))
