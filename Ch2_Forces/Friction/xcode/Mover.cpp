@@ -35,7 +35,7 @@ void Mover::update()
     
     
     velocity_ += acceleration_;
-    //limit(velocity_, topSpeed_);
+    limit(velocity_, topSpeed_);
     location_ += velocity_;
     acceleration_ = vec2(0,0);
 
