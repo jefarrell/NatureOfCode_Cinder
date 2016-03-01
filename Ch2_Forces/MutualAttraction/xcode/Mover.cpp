@@ -13,7 +13,7 @@ using namespace ci;
 
 Mover::Mover(float x_, float y_, float m_){
     location_ = vec2(x_, y_);
-    velocity_ = vec2(1.0f,0.0f);
+    velocity_ = vec2(0.0f,0.0f);
     acceleration_ = vec2(0.0f,0.0f);
     mass_ = m_;
     G_ = 0.01;
