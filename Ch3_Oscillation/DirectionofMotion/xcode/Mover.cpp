@@ -17,15 +17,16 @@ Mover::Mover(float x_, float y_, float m_){
     velocity_ = vec2(0.0f,0.0f);
     mass_ = m_;
     angle_ = 0;
+    mousePos_ = vec2(0,0);
 }
 
 
 void Mover::update()
 {
+ 
     acceleration_ = mousePos_ - location_;
-    std::cout << "before : " << acceleration_ << std::endl;
     acceleration_ = glm::normalize(acceleration_);
-    std::cout << "after : " << acceleration_ << std::endl;
+
     velocity_ += acceleration_;
     velocity_ = limit(velocity_, 5.0);
     location_ += velocity_;
