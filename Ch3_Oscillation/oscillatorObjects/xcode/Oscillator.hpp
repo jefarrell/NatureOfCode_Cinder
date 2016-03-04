@@ -29,11 +29,9 @@ public:
     vec2 angle_;
     vec2 velocity_;
     vec2 amplitude_;
-
     
     void update();
     void draw();
-
     
 private:
     Oscillator();

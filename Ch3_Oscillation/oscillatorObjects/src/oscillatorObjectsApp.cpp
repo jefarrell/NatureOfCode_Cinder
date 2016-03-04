@@ -14,9 +14,8 @@ class oscillatorObjectsApp : public App {
 	void update() override;
 	void draw() override;
     
-    OscillatorRef oscillator;
-    
     int NUM_OSC = 15;
+    OscillatorRef oscillator;
     vector <OscillatorRef> oscillators_;
 };
 
@@ -34,7 +33,6 @@ void oscillatorObjectsApp::mouseDown( MouseEvent event )
 
 void oscillatorObjectsApp::update()
 {
-
     for (auto o : oscillators_)
         o->update();
 
