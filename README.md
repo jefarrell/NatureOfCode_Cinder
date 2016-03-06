@@ -2,6 +2,6 @@
 
 ___
 
-Port of Dan Shiffman's [Nature of Code](http://natureofcode.com/) to Cinder v0.9
+Port of [Dan Shiffman's](https://github.com/shiffman) book [The Nature of Code](https://natureofcode.com/) to Cinder v0.9
 
 Work - in - Progress
