@@ -26,6 +26,7 @@ public:
     vec2 acceleration_;
     float mass_;
     float damping_;
+    float fill_;
     
     void applyForce(vec2 force_);
     void update();

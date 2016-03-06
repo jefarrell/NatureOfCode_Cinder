@@ -33,6 +33,8 @@ public:
     void draw();
     void connect(BobRef b);
     void drawLine(BobRef b);
+    void constrain(BobRef b, float minL, float maxL);
+    
 private:
     Spring(float x_, float y_, float l_);
 };

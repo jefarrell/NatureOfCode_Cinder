@@ -14,6 +14,7 @@ Bob::Bob(float x_, float y_){
     velocity_ = vec2(0,0);
     mass_ = 24;
     damping_ = 0.98;
+    fill_ = 0;
 
 }
 
@@ -37,6 +38,8 @@ void Bob::applyForce(vec2 force_)
 
 void Bob::draw()
 {
-    gl::color(0,0,0);
+    gl::color(fill_, fill_, fill_);
+    gl::drawSolidCircle(location_, mass_);
+    gl::color(1,1,1);
     gl::drawStrokedCircle(location_, mass_);
 }
