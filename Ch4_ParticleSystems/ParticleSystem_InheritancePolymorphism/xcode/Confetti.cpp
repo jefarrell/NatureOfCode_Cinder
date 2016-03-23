@@ -13,15 +13,14 @@ using namespace ci::app;
 
 Confetti::Confetti(vec2 loc_) : Particle(loc_){
     location_ = loc_;
-    std::cout<<"hi";
 };
 
 
 void Confetti::draw() {
-    std::cout<<"in draw"<<std::endl;
+
     
-    float theta = lmap(location_.x, 0.0f, (float)getWindowWidth(), 0.0f, (float)M_PI*2);
-    gl::color(0, 0, 0, lifespan_);
+    float theta = lmap(location_.x, 0.0f, (float)getWindowWidth(), 0.0f, (float)M_PI*10);
+    gl::color(0, 1, 0, lifespan_);
     
     gl::pushMatrices();
     gl::translate(location_);

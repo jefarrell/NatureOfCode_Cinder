@@ -18,8 +18,10 @@ using namespace ci;
 
 typedef std::shared_ptr<class Particle> ParticleRef;
 
+
 class Particle {
 public:
+    
     static ParticleRef create(vec2 l_){
         return ParticleRef(new Particle(l_));
     }
@@ -30,12 +32,13 @@ public:
     float lifespan_;
     
     void update();
-    void draw();
     bool isDead();
     
     friend class Confetti;
+    friend class ParticleSystem;
     
     
 protected:
     Particle(vec2 l_);
+    virtual void draw();
 };

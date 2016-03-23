@@ -18,11 +18,11 @@ ParticleSystem::ParticleSystem(vec2 location_) {
 
 void ParticleSystem::addParticle()
 {
-//    float r = randFloat();
-//    if (r < 0.5)
-   //     particles_.push_back(Particle::create(origin_));
-//    else
-       particles_.push_back(Confetti::create(origin_));
+    float r = randFloat();
+    if (r < 0.5)
+        particles_.push_back(Particle::create(origin_));
+    else
+        particles_.push_back( Confetti::create(origin_));
 }
 
 void ParticleSystem::update()

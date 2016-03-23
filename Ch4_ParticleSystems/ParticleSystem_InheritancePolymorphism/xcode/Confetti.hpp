@@ -19,7 +19,12 @@ typedef std::shared_ptr<class Confetti> ConfettiRef;
 
 class Confetti : public Particle {
 public:
-    Confetti(vec2 loc_);
+    static ConfettiRef create(vec2 l_){
+        return ConfettiRef (new Confetti(l_));
+    }
+    
+    using Particle::Particle;
     void draw();
-
+    
+    Confetti(vec2 loc_);
 };

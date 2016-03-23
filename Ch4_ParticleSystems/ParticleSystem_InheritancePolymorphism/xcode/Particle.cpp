@@ -27,9 +27,9 @@ void Particle::update()
 
 void Particle::draw()
 {
-    gl::color(0, 0, 0, lifespan_);
+    gl::color(0, 0.5, 1, lifespan_);
     gl::drawSolidCircle(location_, 8);
-    gl::color(0, 0, 0, lifespan_);
+    gl::color(0, 0.5, 1, lifespan_);
     gl::drawStrokedCircle(location_, 8);
 }
 

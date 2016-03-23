@@ -5,7 +5,6 @@
 //  Created by John Farrell on 3/9/16.
 //
 //
-#pragma once
 
 #ifndef ParticleSystem_hpp
 #define ParticleSystem_hpp
@@ -30,8 +29,7 @@ public:
     
     vector<ParticleRef> particles_;
     vec2 origin_;
-    ParticleRef particle_;
-    
+
     void addParticle();
     void update();
     void draw();

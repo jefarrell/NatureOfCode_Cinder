@@ -44,4 +44,8 @@ void ParticleSystem_InheritancePolymorphismApp::draw()
 
 }
 
-CINDER_APP( ParticleSystem_InheritancePolymorphismApp, RendererGl )
+// Nice tip from Craig
+CINDER_APP( ParticleSystem_InheritancePolymorphismApp, RendererGl(RendererGl::Options().msaa(16)),
+           [&](App::Settings *settings){
+               settings->setHighDensityDisplayEnabled();
+           })
