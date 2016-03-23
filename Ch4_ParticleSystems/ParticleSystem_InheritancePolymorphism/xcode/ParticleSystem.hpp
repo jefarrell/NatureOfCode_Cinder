@@ -5,6 +5,7 @@
 //  Created by John Farrell on 3/9/16.
 //
 //
+#pragma once
 
 #ifndef ParticleSystem_hpp
 #define ParticleSystem_hpp

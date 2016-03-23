@@ -5,6 +5,7 @@
 //  Created by John Farrell on 3/9/16.
 //
 //
+#pragma once
 
 #ifndef Particle_hpp
 #define Particle_hpp
@@ -35,6 +36,6 @@ public:
     friend class Confetti;
     
     
-private:
+protected:
     Particle(vec2 l_);
 };

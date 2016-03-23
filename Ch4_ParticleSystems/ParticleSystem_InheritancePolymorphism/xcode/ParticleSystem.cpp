@@ -12,20 +12,17 @@
 
 ParticleSystem::ParticleSystem(vec2 location_) {
     vector<ParticleRef> particles_;
-    origin_ = location_;
-    
-    ParticleRef particle_;
-    
+    origin_ = location_;    
 }
 
 
 void ParticleSystem::addParticle()
 {
-    float r = randFloat();
-    if (r < 0.5)
-        particles_.push_back(particle_=Particle::create(origin_));
-    else
-        particles_.push_back(new Confetti(origin_));  //////////
+//    float r = randFloat();
+//    if (r < 0.5)
+   //     particles_.push_back(Particle::create(origin_));
+//    else
+       particles_.push_back(Confetti::create(origin_));
 }
 
 void ParticleSystem::update()
