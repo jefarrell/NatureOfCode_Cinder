@@ -10,7 +10,6 @@ using namespace std;
 class ParticleSystem_InheritancePolymorphismApp : public App {
   public:
 	void setup() override;
-	void mouseDown( MouseEvent event ) override;
 	void update() override;
 	void draw() override;
     
@@ -20,12 +19,9 @@ class ParticleSystem_InheritancePolymorphismApp : public App {
 
 void ParticleSystem_InheritancePolymorphismApp::setup()
 {
+    systems_.push_back(ps = ParticleSystem::create(getWindowCenter()));
 }
 
-void ParticleSystem_InheritancePolymorphismApp::mouseDown( MouseEvent event )
-{
-     systems_.push_back(ps = ParticleSystem::create(event.getPos()));
-}
 
 void ParticleSystem_InheritancePolymorphismApp::update()
 {
