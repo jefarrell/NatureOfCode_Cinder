@@ -12,8 +12,6 @@ ParticleSystem::ParticleSystem(vec2 location_) {
     vector<ParticleRef> particles_;
     origin_ = location_;
     
-    ParticleRef particle_;
-    
 }
 
 
